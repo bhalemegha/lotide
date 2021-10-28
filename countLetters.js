@@ -11,22 +11,20 @@ const countLetters = function(str){
   let obj = {};
   for (let ch of str) {
     let count = 0;
-    if(!letters.includes(ch)/* && !letters["read"] && !letters[ch]*/) {
+    if(!(Object.keys(obj).includes(ch))) {
       for (let c of str){
         if(ch === c ) {
           count++;
         } 
       }
       if(count){
-        letters.push(ch)
-        readCount.push(count);
         obj[ch] = count;
       }
     }
   }
-  console.log(obj);
-  console.log(readCount);
   return obj;
 };
 
-countLetters("This is my counting programme");
+assertEqual(countLetters("LHL")["H"],1);
+assertEqual(countLetters("LHL")["L"],2);
+assertEqual(countLetters("JAVASCRIPT")["A"],2);

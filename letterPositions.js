@@ -1,13 +1,6 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`🟢Assertion Passed:  + ${actual} +   ===  + ${expected}`);
-  } else {
-    console.log(`🔴Assertion Failed:  + ${actual} +  !==  + ${expected}`);
-  }
-};
+
 const letterPositions = function(str){
-  let letters = [];
-  let letterWithPos = [];
+  const results = {};
   let obj = {};
   for (let ch in str) {
     let count = 0; let pos = [];let obj1 = {};
@@ -22,11 +15,11 @@ const letterPositions = function(str){
         obj[str[ch]] = count;
         obj1[str[ch]] = count;
         obj1["position"] = pos;
-        letterWithPos.push(obj1);
+        results[ch] = obj1;
       }
     }
   }
-  return letterWithPos;
+  return results;//letterWithPos;
 };
-console.log(letterPositions("LHL") + "\n");
+console.log(letterPositions("LHL"));
 console.log(letterPositions("lighthouse in the house"));

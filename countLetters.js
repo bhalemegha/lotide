@@ -24,7 +24,7 @@ const countLetters = function(str){
   }
   return obj;
 };
-
+console.log(countLetters("JAVASCRIPT"));
 assertEqual(countLetters("LHL")["H"],1);
 assertEqual(countLetters("LHL")["L"],2);
 assertEqual(countLetters("JAVASCRIPT")["A"],2);

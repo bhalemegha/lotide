@@ -1,0 +1,5 @@
+Tihs is my file created in VIM editor. 
+Lerning Vim commands
+it's so much fun
+Learning Vim commands
+.........

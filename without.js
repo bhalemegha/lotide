@@ -34,6 +34,9 @@ const without = function(source,itemsToRemove) {
       }
     }
   }
-  console.log(arr);
   return arr;
 };
+
+assertEqual(without([1, 2, 3], [1]), [2, 3]); // => [2, 3]
+assertEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]);
+assertEqual(without([], []), []);

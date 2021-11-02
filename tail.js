@@ -5,6 +5,7 @@ const tail = function(arr) {
       array1.push(arr[i]);
     }
   }
+  console.log(array1);
   return array1;
 };
 
